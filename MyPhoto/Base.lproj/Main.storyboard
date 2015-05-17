@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gSb-D3-J17">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CenterViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MyPhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ean-gN-xTJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Lfy-Jb-qI3" customClass="CHTCollectionViewWaterfallLayout" customModule="MyPhoto" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCollectionViewCell" id="X1U-iL-gJm" customClass="MAINCollectionViewCell" customModule="MyPhoto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="159" height="156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HYz-Ih-VoS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="159" height="156"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="HYz-Ih-VoS" firstAttribute="top" secondItem="X1U-iL-gJm" secondAttribute="topMargin" constant="-8" id="DcM-Yh-GO6"/>
+                                            <constraint firstItem="HYz-Ih-VoS" firstAttribute="leading" secondItem="X1U-iL-gJm" secondAttribute="leadingMargin" constant="-8" id="I6e-if-WYB"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="HYz-Ih-VoS" secondAttribute="trailing" constant="-8" id="ISe-QI-y3k"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="HYz-Ih-VoS" secondAttribute="bottom" constant="-8" id="pmb-T5-52F"/>
+                                        </constraints>
+                                        <size key="customSize" width="159" height="156"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="HYz-Ih-VoS" id="W4F-kl-xBN"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="G1u-7O-YBG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fS1-Sj-h27"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ean-gN-xTJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="4uy-pD-xYR"/>
+                            <constraint firstItem="ean-gN-xTJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="JNd-Pk-th0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ean-gN-xTJ" secondAttribute="trailing" constant="-16" id="gK9-4m-E5H"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ean-gN-xTJ" secondAttribute="bottom" id="gZ7-PP-3cU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ean-gN-xTJ" id="en2-6m-Gbm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="310" y="361"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="Jdj-iE-Pc3">
+            <objects>
+                <viewController storyboardIdentifier="LeftViewController" id="WcV-tD-LYE" customClass="SettingViewController" customModule="MyPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CLg-Af-4g2"/>
+                        <viewControllerLayoutGuide type="bottom" id="0SG-gu-4Bj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JJZ-8e-3Ck">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwz-JD-V07" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="361"/>
+        </scene>
+        <!--Main Dynamic View Controller-->
+        <scene sceneID="8V4-yd-oYM">
+            <objects>
+                <viewController id="gSb-D3-J17" customClass="MainDynamicViewController" customModule="MyPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sLN-ej-hwF"/>
+                        <viewControllerLayoutGuide type="bottom" id="d7X-9o-qk7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d2f-PI-kgS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KI9-gH-YZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="-342"/>
         </scene>
     </scenes>
 </document>

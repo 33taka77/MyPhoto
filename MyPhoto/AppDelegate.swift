@@ -9,10 +9,37 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,MSDynamicsDrawerViewControllerDelegate {
 
     var window: UIWindow?
+    var dynamicsDrawerViewController:MSDynamicsDrawerViewController!
+    
+    func setupDrawer(viewController:MSDynamicsDrawerViewController) {
+        self.dynamicsDrawerViewController = viewController
+        self.dynamicsDrawerViewController.delegate = self
+        let size = viewController.view.frame.width - 30.0
+        self.dynamicsDrawerViewController.setRevealWidth(size, forDirection: MSDynamicsDrawerDirection.Left)
+        self.dynamicsDrawerViewController.addStylersFromArray([MSDynamicsDrawerScaleStyler.styler()], forDirection: MSDynamicsDrawerDirection.Left)
+        let leftViewCpntroller: UIViewController? = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("LeftViewController") as? UIViewController
+        self.dynamicsDrawerViewController.setDrawerViewController(leftViewCpntroller, forDirection: MSDynamicsDrawerDirection.Left)
+        
+        //self.dynamicsDrawerViewController.addStylersFromArray([MSDynamicsDrawerParallaxStyler.styler()], forDirection: MSDynamicsDrawerDirection.Right)
+        //let rightViewCpntroller: UIViewController? = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("RightOptionSettingViewController") as? UIViewController
+        //self.dynamicsDrawerViewController.setDrawerViewController(rightViewCpntroller, forDirection: MSDynamicsDrawerDirection.Right)
+        let centerViewController: UIViewController! = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("CenterViewController") as? UIViewController
+        var naviController = UINavigationController(rootViewController: centerViewController!)
+        
+        self.dynamicsDrawerViewController.setPaneViewController(naviController, animated: false, completion: nil)
+        
+    }
 
+    func setCenterViewController() {
+        var centerViewController: UIViewController!
+        centerViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("CenterThumbnailViewController") as! UIViewController
+        let paneNavigationContorller:UINavigationController = UINavigationController(rootViewController: centerViewController)
+        self.dynamicsDrawerViewController.setPaneViewController(paneNavigationContorller, animated: false, completion: nil)
+        
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

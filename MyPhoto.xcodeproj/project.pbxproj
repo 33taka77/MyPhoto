@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A45693717BF2FCEF3B434EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFF3EED5BC011BEC1A7B10F /* libPods.a */; };
 		81BECF681B072C9000501322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BECF671B072C9000501322 /* AppDelegate.swift */; };
 		81BECF6A1B072C9000501322 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BECF691B072C9000501322 /* ViewController.swift */; };
 		81BECF6D1B072C9000501322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BECF6B1B072C9000501322 /* Main.storyboard */; };
 		81BECF6F1B072C9000501322 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BECF6E1B072C9000501322 /* Images.xcassets */; };
 		81BECF721B072C9000501322 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BECF701B072C9000501322 /* LaunchScreen.xib */; };
 		81BECF7E1B072C9000501322 /* MyPhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BECF7D1B072C9000501322 /* MyPhotoTests.swift */; };
+		81BECF881B072CAC00501322 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 81BECF871B072CAC00501322 /* podfile */; };
+		81BECF8B1B072E6700501322 /* MainDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BECF8A1B072E6700501322 /* MainDynamicViewController.swift */; };
+		81BECF8F1B073BEB00501322 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BECF8E1B073BEB00501322 /* SettingViewController.swift */; };
+		81BECF911B073C4F00501322 /* waterFall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BECF901B073C4F00501322 /* waterFall.swift */; };
+		81BECF931B07469900501322 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BECF921B07469900501322 /* AssetManager.swift */; };
+		81BECFC31B07969600501322 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BECFC21B07969600501322 /* ImageManager.swift */; };
+		81BECFC51B08514200501322 /* MAINCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BECFC41B08514200501322 /* MAINCollectionViewCell.swift */; };
+		81BECFC71B08659900501322 /* MainCollectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BECFC61B08659900501322 /* MainCollectionHeaderReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45203C62BBF65E54E9192AAD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		81BECF621B072C9000501322 /* MyPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BECF661B072C9000501322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81BECF671B072C9000501322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +46,17 @@
 		81BECF771B072C9000501322 /* MyPhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BECF7C1B072C9000501322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81BECF7D1B072C9000501322 /* MyPhotoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoTests.swift; sourceTree = "<group>"; };
+		81BECF871B072CAC00501322 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
+		81BECF891B072D2F00501322 /* MyPhotoBridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyPhotoBridge-Header.h"; sourceTree = "<group>"; };
+		81BECF8A1B072E6700501322 /* MainDynamicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDynamicViewController.swift; sourceTree = "<group>"; };
+		81BECF8E1B073BEB00501322 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		81BECF901B073C4F00501322 /* waterFall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = waterFall.swift; sourceTree = "<group>"; };
+		81BECF921B07469900501322 /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
+		81BECFC21B07969600501322 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		81BECFC41B08514200501322 /* MAINCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAINCollectionViewCell.swift; sourceTree = "<group>"; };
+		81BECFC61B08659900501322 /* MainCollectionHeaderReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionHeaderReusableView.swift; sourceTree = "<group>"; };
+		8AFF3EED5BC011BEC1A7B10F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF709B628510CC6FDCEA94DC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A45693717BF2FCEF3B434EE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63F1FC8E8AFA45634F6B8BFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AFF3EED5BC011BEC1A7B10F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		81BECF591B072C9000501322 = {
 			isa = PBXGroup;
 			children = (
+				81BECF871B072CAC00501322 /* podfile */,
 				81BECF641B072C9000501322 /* MyPhoto */,
 				81BECF7A1B072C9000501322 /* MyPhotoTests */,
 				81BECF631B072C9000501322 /* Products */,
+				E5397A2B5E3497C00F761E88 /* Pods */,
+				63F1FC8E8AFA45634F6B8BFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +110,20 @@
 		81BECF641B072C9000501322 /* MyPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				81BECF901B073C4F00501322 /* waterFall.swift */,
 				81BECF671B072C9000501322 /* AppDelegate.swift */,
 				81BECF691B072C9000501322 /* ViewController.swift */,
+				81BECFC41B08514200501322 /* MAINCollectionViewCell.swift */,
+				81BECF921B07469900501322 /* AssetManager.swift */,
 				81BECF6B1B072C9000501322 /* Main.storyboard */,
+				81BECFC61B08659900501322 /* MainCollectionHeaderReusableView.swift */,
 				81BECF6E1B072C9000501322 /* Images.xcassets */,
 				81BECF701B072C9000501322 /* LaunchScreen.xib */,
 				81BECF651B072C9000501322 /* Supporting Files */,
+				81BECF891B072D2F00501322 /* MyPhotoBridge-Header.h */,
+				81BECF8A1B072E6700501322 /* MainDynamicViewController.swift */,
+				81BECF8E1B073BEB00501322 /* SettingViewController.swift */,
+				81BECFC21B07969600501322 /* ImageManager.swift */,
 			);
 			path = MyPhoto;
 			sourceTree = "<group>";
@@ -112,6 +153,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E5397A2B5E3497C00F761E88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45203C62BBF65E54E9192AAD /* Pods.debug.xcconfig */,
+				CF709B628510CC6FDCEA94DC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81BECF811B072C9000501322 /* Build configuration list for PBXNativeTarget "MyPhoto" */;
 			buildPhases = (
+				FD082270E259FA36E40366D5 /* Check Pods Manifest.lock */,
 				81BECF5E1B072C9000501322 /* Sources */,
 				81BECF5F1B072C9000501322 /* Frameworks */,
 				81BECF601B072C9000501322 /* Resources */,
+				4F98BD15B1B3EA1AA524D286 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +246,7 @@
 			files = (
 				81BECF6D1B072C9000501322 /* Main.storyboard in Resources */,
 				81BECF721B072C9000501322 /* LaunchScreen.xib in Resources */,
+				81BECF881B072CAC00501322 /* podfile in Resources */,
 				81BECF6F1B072C9000501322 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,13 +260,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F98BD15B1B3EA1AA524D286 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD082270E259FA36E40366D5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81BECF5E1B072C9000501322 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81BECF911B073C4F00501322 /* waterFall.swift in Sources */,
+				81BECFC71B08659900501322 /* MainCollectionHeaderReusableView.swift in Sources */,
+				81BECF8F1B073BEB00501322 /* SettingViewController.swift in Sources */,
+				81BECFC31B07969600501322 /* ImageManager.swift in Sources */,
+				81BECFC51B08514200501322 /* MAINCollectionViewCell.swift in Sources */,
 				81BECF6A1B072C9000501322 /* ViewController.swift in Sources */,
 				81BECF681B072C9000501322 /* AppDelegate.swift in Sources */,
+				81BECF931B07469900501322 /* AssetManager.swift in Sources */,
+				81BECF8B1B072E6700501322 /* MainDynamicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,21 +433,25 @@
 		};
 		81BECF821B072C9000501322 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45203C62BBF65E54E9192AAD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyPhoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPhoto/MyPhotoBridge-Header.h";
 			};
 			name = Debug;
 		};
 		81BECF831B072C9000501322 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF709B628510CC6FDCEA94DC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyPhoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPhoto/MyPhotoBridge-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +508,7 @@
 				81BECF831B072C9000501322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81BECF841B072C9000501322 /* Build configuration list for PBXNativeTarget "MyPhotoTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +517,7 @@
 				81BECF861B072C9000501322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
