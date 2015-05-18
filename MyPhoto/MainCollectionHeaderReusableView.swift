@@ -9,5 +9,13 @@
 import UIKit
 
 class MainCollectionHeaderReusableView: UICollectionReusableView {
-        
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.greenColor()
+    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor.greenColor()
+    }
 }

@@ -30,7 +30,9 @@ class ViewController: UIViewController,CHTCollectionViewDelegateWaterfallLayout,
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         imageManager = AssetManager.sharedInstance
-        self.collectionView.registerClass( MainCollectionHeaderReusableView.self, forSupplementaryViewOfKind: elementKindSectionHeader, withReuseIdentifier: sectionHeaderIdentifire)
+        self.collectionView.registerClass( MainCollectionHeaderReusableView.classForCoder(), forSupplementaryViewOfKind: elementKindSectionHeader, withReuseIdentifier: sectionHeaderIdentifire)
+        self.collectionView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.collectionView.frame = CGRectMake(0, 0, self.view.bounds.width-10, self.view.bounds.height)
         imageManager.setupData()
         setupSize()
     }
@@ -61,10 +63,10 @@ class ViewController: UIViewController,CHTCollectionViewDelegateWaterfallLayout,
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         collectionLayout = collectionViewLayout as! CHTCollectionViewWaterfallLayout
-        collectionLayout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
+        collectionLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
         collectionLayout.headerHeight = 15;
-        collectionLayout.minimumColumnSpacing = 10;
-        collectionLayout.minimumInteritemSpacing = 10;
+        collectionLayout.minimumColumnSpacing = 5;
+        collectionLayout.minimumInteritemSpacing = 5;
 
         let array = cellSizes[indexPath.section] as [CGSize]
         let size = array[indexPath.row]

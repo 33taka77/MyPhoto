@@ -144,11 +144,17 @@ class AssetManager:ImageManager {
                 section.endDate = collectionList.endDate
                 section.startDate = collectionList.startDate
                 var str:String = ""
-                for location in collectionList.localizedLocationNames {
-                    str += (location as! String) + " "
+                if let num = collectionList.localizedLocationNames {
+                    for location in collectionList.localizedLocationNames {
+                        str += (location as! String) + " "
+                    }
                 }
                 section.locationString = str
-                section.titleString = collectionList.localizedTitle
+                let dataFormatter:NSDateFormatter = NSDateFormatter()
+                dataFormatter.dateFormat = "YYYY/MM/dd"
+                let titleString:String = dataFormatter.stringFromDate(section.startDate) + "--" + dataFormatter.stringFromDate(section.endDate)
+                section.titleString = titleString
+                //section.titleString = collectionList.localizedTitle
                 sections.append(section)
                 let collections = collection as! AssetList
                 for cln in collections.collection {
@@ -168,11 +174,17 @@ class AssetManager:ImageManager {
                     section.startDate = assetsList.startDate
                     section.endDate = assetsList.endDate
                     var str:String = ""
-                    for location in assetsList.localizedLocationNames {
-                        str += (location as! String) + " "
+                    if let strs = assetsList.localizedLocationNames {
+                        for location in assetsList.localizedLocationNames {
+                            str += (location as! String) + " "
+                        }
                     }
                     section.locationString = str
-                    section.titleString = assetsList.localizedTitle
+                    let dataFormatter:NSDateFormatter = NSDateFormatter()
+                    dataFormatter.dateFormat = "YYYY/MM/dd"
+                    let titleString:String = dataFormatter.stringFromDate(section.startDate) + "--" + dataFormatter.stringFromDate(section.endDate)
+                    section.titleString = titleString
+                    //section.titleString = assetsList.localizedTitle
                     let items = assets as! AssetList
                     for item in items.collection {
                         let asset = item as! Asset
